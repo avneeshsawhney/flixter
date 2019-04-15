@@ -12,9 +12,14 @@ before_action :authenticate_user!
     end
   end
 
-  private
- def show
+  def show
     @course = Course.find(params[:id])
+  end
+
+  private
+  helper_method :current_course
+  def current_course
+    @current_course ||= Course.find(params[:course_id])
   end
   def course_params
     params.require(:course).permit(:title, :description, :cost)

@@ -12,6 +12,7 @@ class Instructor::LessonsController < ApplicationController
     redirect_to instructor_course_path(current_section.course)
   end
 
+
   private
 
   def require_authorized_for_current_section
@@ -20,7 +21,7 @@ class Instructor::LessonsController < ApplicationController
     end
   end
 
-  helper_method :current_section
+ helper_method :current_section
   def current_section
     @current_section ||= Section.find(params[:section_id])
   end
