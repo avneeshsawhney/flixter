@@ -68,6 +68,7 @@ gem 'bootstrap', '4.0.0.alpha6'
 gem 'carrierwave', '~> 1.0'
 gem "fog-aws"
 gem "mini_magick"
+gem 'carrierwave-aws'
 
 
 source 'https://rails-assets.org' do
