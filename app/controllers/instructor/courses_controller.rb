@@ -17,6 +17,7 @@ skip_before_action :verify_authenticity_token
 
   def show
     @section = Section.new
+    @lesson = Lesson.new
   end
 
   private
